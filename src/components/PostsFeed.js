@@ -39,7 +39,7 @@ class PostsFeed extends Component {
                     style: {color:"#fff"}
                 }}
                 rightComponent={{
-                    icon: 'user',
+                    icon: 'power-settings-new',
                     color: '#fff',
                     onPress: () => {this.props.logoutUser();this.props.screenProps.rootNavigation.navigate('Login')}
                 }}/>
