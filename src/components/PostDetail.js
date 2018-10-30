@@ -26,12 +26,16 @@ const PostDetail = ({post}) => {
         },
         captionEmailStyle: {
             fontSize: 12,
-            fontWeight: 'bold'
+            fontWeight: 'bold',
+        },
+        captionStyle: {
+            paddingLeft: 10,
+            justifyContent: 'space-around'
         }
     };
 
     const {email, url, caption} = post;
-    const {headerContentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle, captionEmailStyle} = styles;
+    const {headerContentStyle, headerTextStyle, thumbnailStyle, thumbnailContainerStyle, imageStyle, captionEmailStyle, captionStyle} = styles;
 
     return (
         <Card>
@@ -47,8 +51,11 @@ const PostDetail = ({post}) => {
                 <Image style={imageStyle} source={{ uri: url }}/>
             </CardSection>
             <CardSection>
-                <View style={{flex:1}}>
-                <Text style={captionEmailStyle}>{email}</Text><Text>{caption}</Text>
+                <View>
+                    <Text style={captionEmailStyle}>{email}</Text>
+                </View>
+                <View style={captionStyle}>
+                    <Text>{caption}</Text>
                 </View>
             </CardSection>
         </Card>
