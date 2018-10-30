@@ -9,9 +9,9 @@ import { postCreate, logoutUser } from '../actions'
 class PostCreate extends Component {
 
     onButtonPress = () => {
-        const { user, url, caption } = this.props;
+        const { email, url, caption } = this.props;
 
-        this.props.postCreate(user.email, url, caption);
+        this.props.postCreate(email, url, caption);
     }
 
     render(){
@@ -19,7 +19,7 @@ class PostCreate extends Component {
             <View>
                 <Header placement="left" 
                 centerComponent={{
-                    text: this.props.user.email, 
+                    text: this.props.email, 
                     style: {color:"#fff"}
                 }} 
                 rightComponent={{
@@ -41,10 +41,10 @@ class PostCreate extends Component {
 }
 
 const mapStateToProps = (state) => {
-    const { user } = state.auth
+    const { email } = state.auth
     const { url, caption } = state.postForm;
 
-    return { user, url, caption };
+    return { email, url, caption };
 }
 
 export default connect(mapStateToProps, {postCreate, logoutUser})(PostCreate)
