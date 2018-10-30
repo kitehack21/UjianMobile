@@ -25,11 +25,11 @@ const PostDetail = ({post}) => {
             flex:1
         },
         captionEmailStyle: {
+            marginRight: 10,
             fontSize: 12,
             fontWeight: 'bold',
         },
         captionStyle: {
-            paddingLeft: 10,
             justifyContent: 'space-around'
         }
     };
