@@ -7,7 +7,7 @@ export default createBottomTabNavigator(
         Home: {
             screen: PostsFeed
         },
-        CreatePost: {
+        Profile: {
             screen: PostCreate
         }
     },

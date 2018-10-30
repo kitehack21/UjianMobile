@@ -19,7 +19,7 @@ class PostCreate extends Component {
             <View>
                 <Header placement="left" 
                 centerComponent={{
-                    text: "Create Post", 
+                    text: this.props.user.email, 
                     style: {color:"#fff"}
                 }} 
                 rightComponent={{

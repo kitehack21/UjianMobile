@@ -33,16 +33,6 @@ class PostsFeed extends Component {
     render() {
         return (
             <View style={{flex:1}}>
-                <Header placement="left"  
-                centerComponent={{
-                    text: "New Posts", 
-                    style: {color:"#fff"}
-                }}
-                rightComponent={{
-                    icon: 'power-settings-new',
-                    color: '#fff',
-                    onPress: () => {this.props.logoutUser();this.props.screenProps.rootNavigation.navigate('Login')}
-                }}/>
                 <ListView dataSource={this.dataSource} renderRow={this.renderRow}/>
             </View>
         );

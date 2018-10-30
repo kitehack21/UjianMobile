@@ -20,10 +20,10 @@ class PostForm extends Component {
         return(
             <View>
                 <CardSection>
-                    <Input label="Picture URL" placeholder="URL" value={this.props.url} onChangeText={this.onUrlChange}/>
+                    <Input label="Caption" placeholder="caption" value={this.props.caption} onChangeText={this.onCaptionChange}/>
                 </CardSection>
                 <CardSection>
-                    <Input label="Caption" placeholder="caption" value={this.props.caption} onChangeText={this.onCaptionChange}/>
+                    <Input label="Image" placeholder="Image URL" value={this.props.url} onChangeText={this.onUrlChange}/>
                 </CardSection>
             </View>
         )
